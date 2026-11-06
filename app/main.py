@@ -3,6 +3,7 @@ from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from app.database import get_db
+from app.routers.documents import router as documents_router
 
 app = FastAPI(
     title="Document Intelligence API",
@@ -10,6 +11,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.include_router(documents_router)
 
 @app.get("/")
 def root():
