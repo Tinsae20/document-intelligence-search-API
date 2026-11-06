@@ -38,3 +38,6 @@ htmlcov/
 
 # Local tooling
 .python-version
+
+#data
+data/
